@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "updated": "2026-06-26",
-  "manifestUrl": "https://raw.githubusercontent.com/StoryLockStudio/StoryLock/main/build/models-manifest.json",
+  "manifestUrl": "https://raw.githubusercontent.com/StoryLockStudio/updates/main/models-manifest.json",
   "exchangeRates": {
     "USD": 1,
     "GBP": 0.79,
