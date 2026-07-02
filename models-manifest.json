@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "updated": "2026-06-26",
+  "version": "1.4",
+  "updated": "2026-07-02",
   "manifestUrl": "https://raw.githubusercontent.com/StoryLockStudio/updates/main/models-manifest.json",
   "exchangeRates": {
     "USD": 1,
@@ -28,6 +28,7 @@
       "recommended": true,
       "apiKeyUrl": "https://console.anthropic.com/",
       "apiKeyInstructions": "Sign in → API Keys → Create Key",
+      "apiKeyPlaceholder": "sk-ant-…",
       "models": [
         {
           "id": "claude-sonnet-4-6",
@@ -75,6 +76,7 @@
       "recommended": false,
       "apiKeyUrl": "https://platform.openai.com/api-keys",
       "apiKeyInstructions": "Sign in → API Keys → Create new secret key",
+      "apiKeyPlaceholder": "sk-…",
       "models": [
         {
           "id": "gpt-4o",
@@ -124,6 +126,18 @@
           "outputPer1M": 4.40,
           "notes": "Optimised for step-by-step reasoning. Less suited for direct creative writing."
         }
+      ],
+      "imageProviderId": "openai-dalle",
+      "imageModels": [
+        {
+          "id": "dalle",
+          "apiModel": "dall-e-3",
+          "name": "DALL·E 3",
+          "recommended": true,
+          "badge": "",
+          "perImageUSD": 0.08,
+          "notes": "OpenAI's image generation model."
+        }
       ]
     },
     {
@@ -134,44 +148,53 @@
       "recommended": false,
       "apiKeyUrl": "https://aistudio.google.com/app/apikey",
       "apiKeyInstructions": "Sign in with Google → Create API key",
+      "apiKeyPlaceholder": "AIza…",
       "models": [
         {
-          "id": "gemini-2.5-flash",
-          "name": "Gemini 2.5 Flash",
+          "id": "gemini-3.5-flash",
+          "name": "Gemini 3.5 Flash",
           "recommended": true,
           "badge": "Recommended",
           "speed": "Very fast",
-          "quality": "Very good",
+          "quality": "Excellent",
           "contextK": 1000,
-          "inputPer1M": 0.30,
-          "outputPer1M": 2.50,
-          "freeTier": "Free tier: 15 requests/min, 1,500 requests/day — enough for casual use",
-          "notes": "Excellent value. Huge context window handles full-length novels. Free tier available for individual use."
+          "inputPer1M": 1.50,
+          "outputPer1M": 9.00,
+          "freeTier": "Free tier available — no cost for casual, low-volume use via Google AI Studio.",
+          "notes": "Google's latest frontier model for fast, high-volume text and coding tasks. Huge context window handles full-length novels."
         },
         {
-          "id": "gemini-2.5-pro",
-          "name": "Gemini 2.5 Pro",
+          "id": "gemini-3.1-pro-preview",
+          "name": "Gemini 3.1 Pro (Preview)",
           "recommended": false,
           "badge": "Most Capable",
           "speed": "Moderate",
           "quality": "Excellent",
-          "contextK": 1000,
-          "inputPer1M": 1.25,
-          "outputPer1M": 10.00,
-          "notes": "Google's most capable model. Strong reasoning and very long context."
+          "contextK": 200,
+          "inputPer1M": 2.00,
+          "outputPer1M": 12.00,
+          "notes": "The heavy-lifter for advanced reasoning and complex tasks. No free tier. Pricing shown is for prompts up to 200K tokens; longer prompts cost more ($4/$18 per 1M input/output)."
+        }
+      ],
+      "imageProviderId": "google",
+      "imageModels": [
+        {
+          "id": "flash-lite",
+          "apiModel": "gemini-3.1-flash-lite-image",
+          "name": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
+          "recommended": true,
+          "badge": "Fast & Affordable",
+          "perImageUSD": 0.0336,
+          "notes": "Fast, affordable image generation."
         },
         {
-          "id": "gemini-2.0-flash",
-          "name": "Gemini 2.0 Flash",
+          "id": "pro",
+          "apiModel": "gemini-3-pro-image-preview",
+          "name": "Gemini 3 Pro Image Preview (Nano Banana Pro)",
           "recommended": false,
-          "badge": "",
-          "speed": "Fast",
-          "quality": "Good",
-          "contextK": 1000,
-          "inputPer1M": 0.10,
-          "outputPer1M": 0.40,
-          "freeTier": "Free tier: 15 requests/min, 1,500 requests/day",
-          "notes": "Cheapest paid option with a large context window. Also has a free tier."
+          "badge": "Premium",
+          "perImageUSD": 0.134,
+          "notes": "Premium quality, higher cost."
         }
       ]
     }
